@@ -1,0 +1,38 @@
+<resources>
+    <!-- 灰色樓層按鈕樣式 -->
+    <style name="FloorButtonStyle">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">8dp</item>
+
+        <!-- 用 selector 而不是 base -->
+        <item name="android:background">@drawable/btn_circle</item>
+
+        <!-- 關掉 tint，避免紫色 -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="HallButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:textColor">#3F51B5</item>
+        <item name="android:background">@drawable/btn_blue_selector</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item> <!-- 關掉 Material 的 tint -->
+    </style>
+
+
+    <!-- 醫院詳細介紹頁面 Theme -->
+    <style name="Theme.Second.Detail" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#616161</item> <!-- 灰色主色 -->
+        <item name="colorPrimaryVariant">#424242</item> <!-- 深灰變化 -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- 白字 -->
+    </style>
+</resources>

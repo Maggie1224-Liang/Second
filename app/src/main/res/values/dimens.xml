@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- FAB 尺寸 -->
+    <dimen name="fab_diameter">70dp</dimen>
+    <!-- FAB 與底部距離 -->
+    <dimen name="fab_margin_bottom">25dp</dimen>
+</resources>

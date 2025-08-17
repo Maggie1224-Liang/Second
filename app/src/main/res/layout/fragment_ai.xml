@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F8FB">
+
+    <!-- 聊天訊息列表（可捲動） -->
+    <ScrollView
+        android:id="@+id/chatScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/chatInputLayout"
+        android:fillViewport="true"
+        android:overScrollMode="always"
+        android:scrollbars="none"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/chatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- 底部輸入區 -->
+    <LinearLayout
+        android:id="@+id/chatInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#F4F8FB">
+
+        <!-- 訊息輸入框 -->
+        <EditText
+            android:id="@+id/editMessage"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_input"
+            android:hint="輸入訊息..."
+            android:padding="12dp"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <!-- 送出按鈕 -->
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_send"
+            android:tint="#37474F" />
+    </LinearLayout>
+
+</RelativeLayout>

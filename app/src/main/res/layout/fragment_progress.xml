@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F9FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 標題：看診進度查詢 -->
+        <TextView
+            android:id="@+id/title_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="8dp"
+            android:text="看診進度查詢"
+            android:textColor="#0D0101"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- 診別 & 午別 下拉選單 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <!-- 診別 -->
+            <Spinner
+                android:id="@+id/spinner_department"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_bg_lightblue"
+                android:spinnerMode="dropdown" />
+
+            <!-- 午別 -->
+            <Spinner
+                android:id="@+id/spinner_session"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/spinner_bg_lightblue" />
+        </LinearLayout>
+
+        <!-- 醫師資訊（ViewPager2 左右滑） -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp" />
+
+        <!-- 位置資訊 -->
+        <TextView
+            android:id="@+id/title_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableStart="@android:drawable/ic_dialog_map"
+            android:drawablePadding="8dp"
+            android:text="位置資訊"
+            android:textColor="#01030F"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- 地圖佔位圖 -->
+        <ImageView
+            android:id="@+id/image_map_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:background="#EEF0F4"
+            android:contentDescription="地圖位置"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+</ScrollView>

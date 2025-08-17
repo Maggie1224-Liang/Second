@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F6FAFD">
+
+    <!-- 標題 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="網路掛號"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#555555"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 可掛號日期 -->
+    <TextView
+        android:id="@+id/tvDateRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="可掛號日期：2025/07/24~2025/09/25"
+        android:textSize="14sp"
+        android:textColor="#777777"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 日期 Spinner（加寬＋右側箭頭） -->
+    <Spinner
+        android:id="@+id/spinner_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:minWidth="150dp"
+        android:entries="@array/reg_dates"
+        android:background="@drawable/spinner_bg_lightblue"
+        android:backgroundTint="@null"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toBottomOf="@id/tvDateRange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/spinner_department"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <!-- 科別 Spinner（加寬＋右側箭頭） -->
+    <Spinner
+        android:id="@+id/spinner_department"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:minWidth="150dp"
+        android:entries="@array/reg_departments"
+        android:background="@drawable/spinner_bg_lightblue"
+        android:backgroundTint="@null"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toBottomOf="@id/tvDateRange"
+        app:layout_constraintStart_toEndOf="@id/spinner_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <!-- 上午診（置中 chain 左） -->
+    <Button
+        android:id="@+id/btnMorning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_lightblue_selector"
+        android:backgroundTint="@null"
+        android:text="上午診"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/spinner_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnAfternoon"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <!-- 下午診（置中 chain 中） -->
+    <Button
+        android:id="@+id/btnAfternoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/btn_lightblue_selector"
+        android:backgroundTint="@null"
+        android:text="下午診"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/spinner_date"
+        app:layout_constraintStart_toEndOf="@id/btnMorning"
+        app:layout_constraintEnd_toStartOf="@id/btnNight" />
+
+    <!-- 夜間診（置中 chain 右） -->
+    <Button
+        android:id="@+id/btnNight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/btn_lightblue_selector"
+        android:backgroundTint="@null"
+        android:text="夜間診"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/spinner_date"
+        app:layout_constraintStart_toEndOf="@id/btnAfternoon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

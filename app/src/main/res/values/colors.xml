@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="pill_text_un">#555555</color>
+    <color name="pill_text_on">#FFFFFF</color>
+    <!-- 底部導覽列背景：AliceBlue -->
+    <color name="bottom_nav_bg">#F0F8FF</color>
+    <!-- FAB 淺藍 -->
+    <color name="fab_light_blue">#90CAF9</color>
+</resources>

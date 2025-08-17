@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 日期選項 -->
+    <string-array name="reg_dates">
+        <item>2025/08/10</item>
+        <item>2025/08/11</item>
+        <item>2025/08/12</item>
+        <item>2025/08/13</item>
+    </string-array>
+
+    <!-- 科別選項 -->
+    <string-array name="reg_departments">
+        <item>神經外科</item>
+        <item>家醫科</item>
+        <item>骨科</item>
+    </string-array>
+</resources>
