@@ -62,7 +62,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginBottom="8dp" />
 
-        <!-- AB / C 廳切換按鈕（藍色系 selector） -->
+        <!-- AB / C 廳切換按鈕 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,7 +82,6 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/btn_blue_selector"
                 android:backgroundTint="@null" />
-                app:backgroundTint="@null" />
 
             <Button
                 android:id="@+id/btnC"
@@ -95,10 +94,9 @@
                 android:paddingRight="16dp"
                 android:background="@drawable/btn_blue_selector"
                 android:backgroundTint="@null" />
-                app:backgroundTint="@null" />
         </LinearLayout>
 
-        <!-- 樓層按鈕群（Flexbox 自動換行 + 置中） -->
+        <!-- 樓層按鈕群 -->
         <com.google.android.flexbox.FlexboxLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
